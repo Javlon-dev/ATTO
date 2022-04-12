@@ -1,0 +1,76 @@
+***** Atto *****
+1. Profile (name,surname,phone unique,pswd,created_date,status,role)
+2. Card (number,exp_date,balance,status,phone,created_date)
+3. Terminal (code,address,status,created_date)
+4. Transaction (card_number,amount,terminal_code,type,transaction_date)
+
+*** Enums ***
+ Transaction Type: ReFill, Payment
+ Profile Role: USER,ADMIN
+
+
+*** Menu ***
+1. Login
+    Enter phone:
+    Enter pswd:
+2. Registration:
+    Enter name:
+    Enter surname:
+    Enter phone:
+    Enter pswd:
+
+
+
+*** User  Menu ***
+1. Card
+    1. Add Card (number) - (cartani profile ga ulab qo'yamiz.) (added_date)
+    2. Card List (number,exp_date,balance)
+    3. Card Change Status
+    4. Delete Card (visible_user = false,deleted_user)
+2. ReFill (pul tashlash) (carta userga tegishli bo'lishi kerak.)
+     Enter card number:
+     Balance:
+     (Transaction with type 'ReFill')
+3. Transaction
+    CardNumber, Address, Amount,TransactionDate,Type (oxirgi birinchi ko'rinadi)
+4. Make Payment (pul to'lash)
+    Enter cardNumber:
+    Enter terminal number:
+     (Transaction with type 'Payment')
+
+
+*** Admin Menu ***
+1. Card
+    1. Create (number,exp_date)
+    2. Card List
+    3. Update (number,exp_date)
+    4. Change status
+    5. ReFill (pul to'ldirish)
+    6. Delete
+2. Terminal
+    1. Create(code,address)
+    2. Terminal List
+    3. Update (code,address)
+    4. Change Status
+    5. Delete
+3. Profile
+    1. Profile List
+    2. Change Status (by phone)
+4. Transaction List
+     CardNumber, TerminalCode, Amount,TransactionDate,Type (oxirgi birinchi ko'rinadi)
+5. Company Card
+    1. card bo'ladi shu cardga to'lovlar tushadi. bu sql da insert qilinga bo'ladi.
+6. Statistic
+    1. Bugungi to'lovlar
+         CardNumber, TerminalNumber, Amount,TransactionDate,Type (oxirgi birinchi ko'rinadi)
+    2. Kunlik to'lovlar (bir kunlik to'lovlar):
+        Enter Date: yyyy-MM-dd
+          CardNumber, TerminalNumber, Amount,TransactionDate,Type (oxirgi birinchi ko'rinadi)
+    3. Oraliq to'lovlar:
+        Enter FromDate: yyyy-MM-dd
+        Enter ToDate:   yyyy-MM-dd
+    4. Umumiy balance (company card dagi pulchalar)
+    5. Transaction by Terminal:
+        Enter terminal number:
+    6. Transaction By Card:
+        Enter Card number:
